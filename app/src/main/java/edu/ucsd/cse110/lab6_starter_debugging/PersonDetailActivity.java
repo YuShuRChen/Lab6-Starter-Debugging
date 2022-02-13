@@ -29,7 +29,7 @@ public class PersonDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_person_detail);
 
         Intent intent = getIntent();
-        int personId = intent.getIntExtra("person_id", 0);
+        int personId = intent.getIntExtra("person_name", 0);
 
         db = AppDatabase.singleton(this);
         person = db.personsDao().get(personId);
